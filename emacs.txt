@@ -1,0 +1,29 @@
+;; load configuration file path
+(add-to-list 'load-path "~/.emacs.d/color-theme")
+(require 'color-theme)
+(color-theme-initialize)
+
+;; select one of the color-theme
+;; (color-theme-taming-mr-arneson)
+;; (color-theme-pok-wog)
+ (color-theme-subtle-hacker)
+;; (color-theme-sitaramv-solaris)
+;; (color-theme-shaman)
+;; (color-theme-ryerson)
+;; (color-theme-robin-hood)
+;; (color-theme-gnome2)
+;; (color-theme-deep-blue)
+;; (color-theme-classic)
+;;(color-theme-bharadwaj-slate)
+
+
+
+;; set font for mac 
+;; set english font
+(set-face-attribute 
+'default nil :font "Monaca 12")
+;; set chinese font
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+(set-fontset-font (frame-parameter nil 'font)
+                  charset
+                  (font-spec :family"MicrosoftYaHei" :size 14)))
